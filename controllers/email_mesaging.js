@@ -9,6 +9,7 @@ const SendGridEmail = (to, emailTemplate) => {
   const sendMail = async (msg) => {
     try {
       await sgMail.send(msg);
+      console.log("Email sent successfully");
     } catch (error) {
       console.log(error);
       if (error.response) {
